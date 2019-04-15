@@ -1674,7 +1674,7 @@ static pid_t mingw_spawnve_fd(const char *cmd, const char **argv, char **deltaen
 			      const char *dir, const char *prepend_cmd,
 			      int fhin, int fhout, int fherr)
 {
-	static int restrict_handle_inheritance = 1;
+	static int restrict_handle_inheritance = 0;
 	STARTUPINFOEXW si;
 	PROCESS_INFORMATION pi;
 	LPPROC_THREAD_ATTRIBUTE_LIST attr_list = NULL;
